@@ -3,10 +3,11 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import React, {useEffect, useState} from "react";
 
-import logo from "../assets/img/logo.svg";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import logo from "../../assets/img/logo.svg";
+import navIcon1 from "../../assets/img/nav-icon1.svg";
+import navIcon2 from "../../assets/img/nav-icon2.svg";
+import navIcon3 from "../../assets/img/nav-icon3.svg";
+import './style.css';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -54,9 +55,10 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-                <a href="https://www.linkedin.com/in/caio-souza-lima-3a524b200" target={"_blank"} rel="noreferrer"><img src={navIcon1} alt={""}/></a>
-                <a href="#"><img src={navIcon2} alt={""}/></a>
-                <a href="#"><img src={navIcon3} alt={""}/></a>
+                <a href="https://www.linkedin.com/in/caio-souza-lima-3a524b200" target={"_blank"} rel="noreferrer"><img
+                  src={navIcon1} alt={""}/></a>
+                <a href="src/components#"><img src={navIcon2} alt={""}/></a>
+                <a href="src/components#"><img src={navIcon3} alt={""}/></a>
             </div>
             <button className="vvd" onClick={() => console.log("connect")}>
                 <span>Let"s Connect</span>
