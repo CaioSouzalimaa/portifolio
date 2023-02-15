@@ -4,8 +4,10 @@ import projImg3 from "../../assets/img/project-img3.png";
 import colorSharp2 from "../../assets/img/color-sharp2.png";
 import {Container, Col, Row, Tab,Nav } from "react-bootstrap";
 import {ProjectCard} from "./project_card/project_card";
+import 'animate.css';
 
 import './style.css';
+import TrackVisibility from "react-on-screen";
 
 export const Project = () => {
 
@@ -46,7 +48,10 @@ export const Project = () => {
     <section className="project" id="project">
       <Container>
         <Row>
-          <Col>
+          <Col size={12}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
             <h2>Projects</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industry's standard dummy text ever since the 1500s,</p>
@@ -90,6 +95,8 @@ export const Project = () => {
                 </Tab.Pane>
               </Tab.Content>
             </Tab.Container>
+                </div>}
+            </TrackVisibility>
           </Col>
         </Row>
       </Container>
